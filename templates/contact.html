@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}	
+	<div class="row align-items-left">
+		<div class="col-lg-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="lead mb-4">Email:</p>
+					</div>
+					<div class="col-md-6">
+						<a class="lead mb-4" href="mailto:liangzuoren@gmail">liangzuoren@gmail</a>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12">
+						<a class="lead mb-4" href="{{ url_for('resume')}}">Resume</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="lead mb-4">CV</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
