@@ -39,11 +39,17 @@ def post(name):
 	post = flatpages.get_or_404(path)
 	return render_template('post.html', post=post)
 
-@app.route('/contact/resume/')
-def resume():
+@app.route('/contact/resumeData/')
+def resumeData():
 	workingdir = os.path.abspath(os.getcwd())
 	filepath = workingdir + '/static/files/'
 	return send_from_directory(filepath,'Resume2021Data.pdf')
-	
+
+@app.route('/contact/resumeSoftware')
+def resumeSoftware():
+	workingdir = os.path.abspath(os.getcwd())
+	filepath = workingdir + '/static/files/'
+	return send_from_directory(filepath,'Resume2021Software.pdf')
+
 if __name__ == '__main__':
 	app.run(debug=True)
