@@ -22,9 +22,9 @@ def home():
 def about():
 	return render_template('about.html')
 	
-@app.route('/contact')
+@app.route('/contactme')
 def contact():
-	return render_template('contact.html')
+	return render_template('contactme.html')
 
 #Grab all posts in the flatpages path to display on the posts page
 @app.route('/posts/')
