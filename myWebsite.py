@@ -3,7 +3,7 @@ from flask_flatpages import FlatPages
 import os
 
 #setting up Flatpages
-DEBUG = False
+DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
@@ -46,4 +46,4 @@ def resume():
 	return send_from_directory(filepath,'Resume2021Data.pdf')
 	
 if __name__ == '__main__':
-	app.run(debug=False)
+	app.run(debug=True)
