@@ -5,10 +5,12 @@
 	<h3 class='row-align-items-left'> {% block title %} Posts {% endblock %} </h3>
 	
 	{% for post in posts %}
-		<p class="mb-4">Post {{post.number}} Date: {{post.date}}</p>
-		<p href="{{url_for('post', name=post.path.replace('posts/',''))}}">
-			{{post.title}}
-		</p>
+		<div class="container">
+			<p class="row">Post {{post.number}} Date: {{post.date}}</p>
+			<a class="row" href="{{url_for('post', name=post.path.replace('posts/',''))}}">
+				{{post.title}}
+			</a>
+		</div>
 	{% endfor %}
 
 {% endblock %}	
