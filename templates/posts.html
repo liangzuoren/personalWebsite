@@ -6,7 +6,7 @@
 	
 	{% for post in posts %}
 		<div class="container">
-			<p class="row">Post {{post.number}} Date: {{post.date}}</p>
+			<p class="row mb-1 mt-4">Post {{post.number}} Date: {{post.date}}</p>
 			<a class="row" href="{{url_for('post', name=post.path.replace('posts/',''))}}">
 				{{post.title}}
 			</a>
