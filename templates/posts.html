@@ -5,7 +5,7 @@
 	<h3 class='row-align-items-left'> {% block title %} Posts {% endblock %} </h3>
 	
 	{% for post in posts %}
-		<p class="lead mb-4">Post Date: {{post.date}}</p>
+		<p class="mb-4">Post {{post.number}} Date: {{post.date}}</p>
 		<a href="{{url_for('post', name=post.path.replace('posts/',''))}}">
 			{{post.title}}
 		</a>
