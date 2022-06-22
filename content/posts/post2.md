@@ -868,3 +868,9 @@ MDA=
 </video>
 
 As you can see, most of the relevant edges are highlighted in the photo. This makes the resultihng image much more lightweight but still contain a ton of useful information. For example, you can still make out general shapes, see the trees, and see where I am in the image, despite missing so many pixels compared to the original! This makes it great for further analysis as a much more lightweight version of the original image that retains much of the important pieces of original information.
+
+The downside of the Sobel filter despite its detail was how long it takes to run. A Canny filter is used quite often in moving images to detect edges. This algorithm is quite fast but may lack some details on the edges as seen below. This is still useful in computer vision techniques to grab edges of moving images with the benefit of being lightweight and easy to calculate. The Canny filter captures the most important edges, you can still tell from the outline that I am sitting in a pavilion with some trees in the background, but it lacks the details of those edges that I had gotten with the Sobel filter.
+
+<img src="/static/images/CannyExample.png" class="img-fluid" alt="..." loading="lazy" width="640" height="480">
+
+Both techniques are quite powerful with some different use cases. Canny filters seem to be much more commonly used in industry today due to how quickly we can use it to calculate edges while still maintaining good accuracy.
