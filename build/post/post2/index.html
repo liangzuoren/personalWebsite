@@ -30,9 +30,19 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-fluid">
         
-	<p>I have always been interested in edge detection for a multitude of purposes. As a bioengineer by training, I am still thinking about how edges are important in the biological space. For example, I can see that cell walls can be outlined quite well utilizing a variety of algorithms for edge detection. I wanted to try my hand at implementing some of these with the end goal of creating a graphic of how the edge detection algorithm goes over the image to visualize it better. To do that, I created a quick python program to do exactly that - implement edge detection on an image of myself I took during one of my travels in Taipei using Numpy and matplotlib to graph and record the animation. I also utilized OpenCV since the Sobel filter I had initially gone with was actually quite slow so I wanted to explore more standard methods of edge-detection utilizing the openCV library.</p>
+<main class="container">
+	<div class="row g-5">
+		<div class="col-md-8">
+			<article class="blog-post">
+				<h2 class="blog-post-title mb-1">
+					Edge Detection
+				</h2>
+				<p class="blog-post-meta"> 2022-06-21 Post #2 by Tony </p>
+				<p>Edge detection is an important topic within the the field of computer vision. Retracing my Bioengineering roots and inspired by previous Kaggle competitions I have done, I explore Edge Detection using Sobel and Canny filters in this project.</p>
+				<hr>
+				<p><p>I have always been interested in edge detection for a multitude of purposes. As a bioengineer by training, I am still thinking about how edges are important in the biological space. For example, I can see that cell walls can be outlined quite well utilizing a variety of algorithms for edge detection. I wanted to try my hand at implementing some of these with the end goal of creating a graphic of how the edge detection algorithm goes over the image to visualize it better. To do that, I created a quick python program to do exactly that - implement edge detection on an image of myself I took during one of my travels in Taipei using Numpy and matplotlib to graph and record the animation. I also utilized OpenCV since the Sobel filter I had initially gone with was actually quite slow so I wanted to explore more standard methods of edge-detection utilizing the openCV library.</p>
 <p>Here is the image prior to processing:</p>
 <p><img src="/static/images/TonyTaipei.jpg" class="img-fluid" alt="..." loading="lazy" width="640" height="480"></p>
 <p>Here is the video of the animation of processing:</p>
@@ -896,10 +906,29 @@ MDA=
 <p>As you can see, most of the relevant edges are highlighted in the photo. This makes the resultihng image much more lightweight but still contain a ton of useful information. For example, you can still make out general shapes, see the trees, and see where I am in the image, despite missing so many pixels compared to the original! This makes it great for further analysis as a much more lightweight version of the original image that retains much of the important pieces of original information.</p>
 <p>The downside of the Sobel filter despite its detail was how long it takes to run. A Canny filter is used quite often in moving images to detect edges. This algorithm is quite fast but may lack some details on the edges as seen below. This is still useful in computer vision techniques to grab edges of moving images with the benefit of being lightweight and easy to calculate. The Canny filter captures the most important edges, you can still tell from the outline that I am sitting in a pavilion with some trees in the background, but it lacks the details of those edges that I had gotten with the Sobel filter.</p>
 <p><img src="/static/images/CannyExample.png" class="img-fluid" alt="..." loading="lazy" width="640" height="480"></p>
-<p>Both techniques are quite powerful with some different use cases. Canny filters seem to be much more commonly used in industry today due to how quickly we can use it to calculate edges while still maintaining good accuracy.</p>
-	2
-	Edge Detection with Sobel and Canny
-	2022-06-21
+<p>Both techniques are quite powerful with some different use cases. Canny filters seem to be much more commonly used in industry today due to how quickly we can use it to calculate edges while still maintaining good accuracy.</p></p>
+			</article>
+		</div>
+		<div class="col-md-4">
+			<div class="position-sticky" style="top: 2rem;">
+			<div class="p-4 mb-3 bg-light rounded">
+				<h4 class="fst-italic">About</h4>
+				<p class="mb-0">I'm always looking to explore and learn about new things. I find the internet a great resource and hope to contribute to it just a little bit with the tidbits of knowledge I accumulate while I am learning</p>
+			</div>
+	
+			<div class="p-4 bg-light">
+				<h4 class="fst-italic">Media</h4>
+				<ol class="list-unstyled">
+				<li><a href="https://github.com/liangzuoren">GitHub</a></li>
+				<li><a href="https://linkedin.com/in/TonyLRen">LinkedIn</a></li>
+				<li><a href="https://kaggle.com/liangzuoren">Kaggle</a></li>
+				</ol>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</main>
 
     </div>
 

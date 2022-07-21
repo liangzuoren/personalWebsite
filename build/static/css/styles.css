@@ -1,9 +1,9 @@
-body {
-    background-color: indigo;
+.development{
+    color: blue;
 }
-h1 {
-    color: wheat;
+.dataScience{
+    color: green;
 }
-p {
-    color: wheat;
+.travel{
+    color: red;
 }
