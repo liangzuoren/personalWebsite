@@ -8,30 +8,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>{% block title %} {% endblock %}</title>
+    <title> </title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
+        <a class="navbar-brand" href="/">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="{{  url_for('about')}}">About</a>
+                <a class="nav-link" href="/about/">About</a>
             </li>
 			<li class="nav-item active">
-                <a class="nav-link" href="{{  url_for('contact')}}">Contact Me</a>
+                <a class="nav-link" href="/contactme/">Contact Me</a>
             </li>
 			<li class="nav-item active">
-				<a class="nav-link" href="{{  url_for('posts')}}">Posts</a>
+				<a class="nav-link" href="/posts/">Posts</a>
 			</li>
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
-        {% block content %} {% endblock %}
+    <div class="container">
+        
+	<p>Hello World! I am extremely excited to start building my own website for posting about my interests which include this website. 
+I have always wanted to learn front end programming as another skill in my repertoire and I am excited to start learning.
+As an engineer, I am passionate about building something and the process of building my own website is extremely satisfying to watch as it gets built block by block.</p>
+<p>To document a bit on how this website was put together, I am utilizing Python, Flask, and Freezer to create a static webpage to host. This allows to also to create posts (as infrequently as I do) in Markdown for easy formatting and updating. For formatting, I am using Bootstrap and some CSS to do the heavy lifting. It has been an incredible learning experience so far and it definitely feels good to see a project I am working on make progress.</p>
+	1
+	Starting the blog and creating a website
+	2022-02-15
+
     </div>
 
     <!-- Optional JavaScript -->

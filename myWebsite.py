@@ -16,7 +16,9 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def home():
-	return render_template('home.html')
+	posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
+	posts.sort(key=lambda item:item['date'], reverse = True)
+	return render_template('home.html', posts=posts)
 
 @app.route('/about/')
 def about():

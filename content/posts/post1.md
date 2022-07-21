@@ -1,6 +1,8 @@
-title: Starting the blog and creating a website
+title: Hello World!
 date: 2022-02-15
 number: 1
+category: Development
+summary: Starting the blog and creating a website has always been a goal of mine. I didn't even know where to start - but armed with my knowledge of Python, I explore Flask and Jinja2 to make a basic website and blog about myself.
 
 Hello World! I am extremely excited to start building my own website for posting about my interests which include this website. 
 I have always wanted to learn front end programming as another skill in my repertoire and I am excited to start learning.

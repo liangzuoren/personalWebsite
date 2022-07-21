@@ -8,30 +8,59 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>{% block title %} {% endblock %}</title>
+    <title> </title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
+        <a class="navbar-brand" href="/">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="{{  url_for('about')}}">About</a>
+                <a class="nav-link" href="/about/">About</a>
             </li>
 			<li class="nav-item active">
-                <a class="nav-link" href="{{  url_for('contact')}}">Contact Me</a>
+                <a class="nav-link" href="/contactme/">Contact Me</a>
             </li>
 			<li class="nav-item active">
-				<a class="nav-link" href="{{  url_for('posts')}}">Posts</a>
+				<a class="nav-link" href="/posts/">Posts</a>
 			</li>
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
-        {% block content %} {% endblock %}
+    <div class="container">
+        	
+	<div class="row align-items-left">
+		<div class="container">
+			<div class="col col-lg-4">
+				<img class="img-fluid" src="/static/images/personalPic2.jpg" alt="">
+			</div>
+		</div>
+	
+	<div class="container">
+		<h1 class="display-5 ml-2 fw-bold">Tony Ren</h1>
+	</div>
+	
+	<div class="container">
+		
+		<h4 class="display-5 ml-2 fw-bold">My story</h4>
+		
+	</div>
+	
+	<div class="container">
+		<p class="lead ml-2 mb-4"> 
+			Hi, I am a passionate learner about software, machine learning, and data science. I graduated from Rice University
+			in May of 2017 with a Bachelor's in Bioengineering. Throughout my schooling, I had always had an interest in things
+			related to computer science. My freshman year included developing an Android application intended for Down Syndrome
+			children to use that you can find on my GitHub. I proceeded to lead a variety of development projects throughout my
+			time at Rice, including designing and programming GUIs for neonatal CPAP devices, doing computational modeling on 
+			various parts of the body such as the lungs, and creating a Mask RCNN model for deep learning on nucleus identification
+			through Kaggle. I enjoy learning about machine learning topics, novel algorithms, and traveling.
+		</p>
+	</div>
+
     </div>
 
     <!-- Optional JavaScript -->

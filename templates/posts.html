@@ -1,16 +1,47 @@
 {% extends 'base.html' %}
 
 {% block content %}	
-	
-	<h3 class='row-align-items-left'> {% block title %} Posts {% endblock %} </h3>
-	
-	{% for post in posts %}
-		<div class="container">
-			<p class="row mb-1 mt-4">Post {{post.number}} Date: {{post.date}}</p>
-			<a class="row" href="{{url_for('post', name=post.path.replace('posts/',''))}}">
-				{{post.title}}
-			</a>
+	<div class='container'>
+		<h3 class="text-center"> {% block title %} Posts {% endblock %} </h3>
+	</div>
+	<main class="container">
+		<div class="row g-5">
+			<div class="col-md-8">
+				{% for post in posts %}
+					<div class="container-fluid">
+						<article class="blog-post">
+							<h2 class="blog-post-title mb-1">
+								{{post.title}}
+							</h2>
+							<p class="blog-post-meta"> {{post.date}} Post #{{post.number}} by Tony </p>
+							<p>{{post.summary}}</p>
+							<a href="{{url_for('post', name=post.path.replace('posts/',''))}}">
+								Continue Reading
+							</a>
+							<hr>
+						</article>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="col-md-4">
+				<div class="position-sticky" style="top: 2rem;">
+				<div class="p-4 mb-3 bg-light rounded">
+					<h4 class="fst-italic">About</h4>
+					<p class="mb-0">I'm always looking to explore and learn about new things. I find the internet a great resource and hope to contribute to it just a little bit with the tidbits of knowledge I accumulate while I am learning</p>
+				</div>
+		
+				<div class="p-4 bg-light">
+					<h4 class="fst-italic">Media</h4>
+					<ol class="list-unstyled">
+					<li><a href="https://github.com/liangzuoren">GitHub</a></li>
+					<li><a href="https://linkedin.com/in/TonyLRen">LinkedIn</a></li>
+					<li><a href="https://kaggle.com/liangzuoren">Kaggle</a></li>
+					</ol>
+				</div>
+				</div>
+			</div>
+			</div>
 		</div>
-	{% endfor %}
+	</main>
 
 {% endblock %}	
