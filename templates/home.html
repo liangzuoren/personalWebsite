@@ -7,42 +7,81 @@
 		<img class="img-fluid mx-auto mb-4" src="{{url_for('static',filename='images/personalPic.jfif')}}" alt="">
 		<h1 class="display-5 fw-bold">Tony Ren</h1>
 		<div class="col-lg-6 mx-auto">
-		<p class="lead mb-4"><strong>Hello, I am an aspiring software engineer/data scientist.</strong></p>
-		<p class="lead mb-4"><strong>This is my blog where I talk about various things I am interested in. </strong></p>
-		
-		<div class="container-fluid">
-			<div class="row align-items-center justify-content-center">
-				<div class="col-md-2">
-					<a href="https://linkedin.com/in/TonyLRen"> 
-						<img src="{{url_for('static',filename='images/LI-In-Bug.png')}}" class="img-fluid" alt="..." loading="lazy">
-					</a>
-				</div>
-				<div class="col-md-2">
-					<a href="https://github.com/liangzuoren">
-						<img src="{{url_for('static',filename='images/GitHub_Logo.png')}}" class="img-fluid" alt="..." loading="lazy">
-					</a>
-				</div>
-				<div class="col-md-2">
-					<a href="https://kaggle.com/liangzuoren">
-						<img src="{{url_for('static',filename='images/Kaggle_logo.png')}}" class="img-fluid" alt="..." loading="lazy">
-					</a>
+			<p class="lead mb-4"><strong>Hello, I am an aspiring software engineer/data scientist.</strong></p>
+			<p class="lead mb-4"><strong>This is my blog where I talk about various things I am interested in. </strong></p>
+			
+			<div class="container-fluid">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-md-2">
+						<a href="https://linkedin.com/in/TonyLRen"> 
+							<img src="{{url_for('static',filename='images/LI-In-Bug.png')}}" class="img-fluid" alt="..." loading="lazy">
+						</a>
+					</div>
+					<div class="col-md-2">
+						<a href="https://github.com/liangzuoren">
+							<img src="{{url_for('static',filename='images/GitHub_Logo.png')}}" class="img-fluid" alt="..." loading="lazy">
+						</a>
+					</div>
+					<div class="col-md-2">
+						<a href="https://kaggle.com/liangzuoren">
+							<img src="{{url_for('static',filename='images/Kaggle_logo.png')}}" class="img-fluid" alt="..." loading="lazy">
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
   </div>
-  <div class="container-fluid">
-		<div
-			class="bg-image p-5 text-center shadow-1-strong rounded mt-5 text-white img-responsive"
-			style="
-				background-image: url('./static/images/Bahamas2.jpg');
-				background-size: cover;
-				height: 100vh;
-			">
-			<h1> Blog Posts </h1>
-			<p1> Come explore the world with me! </p1>
+  
+  <section id="projects">
+		<div class="p-5 text-center project_bg shadow-1-strong rounded mt-5 text-white">
+			<h1> Projects </h1>
+			<hr class="white_text"/>
+			<div class="card_container">
+				<div class="card">
+					<a href="https://github.com/liangzuoren/edge-extractor">
+						<img src="{{url_for('static',filename='/images/EdgeExtractorProject.png')}}">
+					</a>
+					<div class="card_head">Edge Detection</div>
+					<div class = "card_labels">
+						<p class="card_label"> Python </p>
+						<p class="card_label"> OpenCV </p>
+					</div>
+				</div>
+				<div class="card">
+					<a href="https://github.com/liangzuoren/personalWebsite">
+						<img src="{{url_for('static',filename='/images/WebsiteProject.png')}}">
+					</a>
+					<div class="card_head">Personal Website</div>
+					<div class="card_labels">
+						<p class="card_label"> HTML </p>
+						<p class="card_label"> CSS </p>
+						<p class="card_label"> Flask </p>
+						<p class="card_label"> Jinja2 </p>
+						<p class="card_label"> Frozen-Flask </p>
+					</div>
+				</div>
+				<div class="card">
+					<a href="https://github.com/liangzuoren/COMP540/tree/master/KaggleTermProject">
+						<img src="{{url_for('static',filename='/images/NucleusDetectionProject.png')}}">
+					</a>
+					<div class="card_head">Mask RCNN for Nucleus Detection</div>
+					<div class="card_labels">
+						<p class="card_label"> Python </p>
+						<p class="card_label"> Jupyter Notebook </p>
+						<p class="card_label"> Pandas </p>
+						<p class="card_label"> Matplotlib </p>
+						<p class="card_label"> Numpy </p>
+						<p class="card_label"> Google Colabs </p>
+						<p class="card_label"> Mask RCNN </p>
+						<p class="card_label"> Tensorflow </p>
+					</div>
+				</div>
+			  </div>
 		</div>
-	</div>
+	</section>
 
+	<h1 class="mt-5"> Blog Posts </h1>
+	<hr style="height:1px;border:none;color:#333;background-color:#333;" />
 	<div class="row mb-2 mt-5">
 	{% for post in posts %}
 		<div class="col-md-6">
