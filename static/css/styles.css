@@ -35,9 +35,10 @@ width: 5rem;
 .card_container .card {
 height: 55vmin;
 max-width: 20%;
+min-width: 20%;
 padding: 0.1rem;
 position: relative;
-display:inline-block;
+display: inline-block;
 margin-right: -1rem;
 }
 
