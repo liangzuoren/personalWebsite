@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 <main class="container">
 	<div class="row g-5">
 		<div class="col-md-8">
 			<article class="blog-post">
-				<h2 class="blog-post-title mb-1">
+				<h2 class="blog-post-title mb-1 text-white">
 					{{post.title}}
 				</h2>
-				<p class="blog-post-meta"> {{post.date}} Post #{{post.number}} by Tony </p>
+				<p class="blog-post-meta text-white"> {{post.date}} Post #{{post.number}} by Tony </p>
 				<p>{{post.summary}}</p>
 				<hr>
 				<p>{{post.html|safe}}</p>
