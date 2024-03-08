@@ -43,18 +43,17 @@ margin-right: -1rem;
 }
 
 .card_container .card .card_head {
-display: flex;
-flex-wrap: wrap;
 color: white;
 background: black;
-margin: 0.1rem;
+width: 100%;
 transition: all 0.5s ease-in-out;
-min-width: 100%;
 align-items: center;
 justify-content: center;
 position: absolute;
 top: 0;
 font-size: 1rem;
+overflow-wrap: break-word;
+white-space: pre-line;
 }
 
 .card_container .card:hover {
@@ -109,4 +108,27 @@ padding: 0.2rem 0.85rem 0.25rem;
 }
 ::-webkit-scrollbar-thumb:hover{
     background:darkslategray;
+}
+
+@media screen and (max-width: 480px) {
+    
+    .card_container .card {
+        min-width: 50vw;
+        max-width: 50vw;
+        padding: 0.1rem;
+        position: relative;
+        display: inline-block;
+        margin-right: 2rem;
+        }
+    
+    .card_container:before, .card_container:after {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        }
+        
+    .card_labels {
+        visibility:hidden
+    }
+
 }
